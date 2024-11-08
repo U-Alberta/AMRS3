@@ -1,4 +1,5 @@
-# AMRSSS & AMRCoC
+[TextGraphs-17] Semantic Graphs for Syntactic Simplification: A Revisit from the Age of LLM
+
 Peiran Yao, Kostyantyn Guzhva, and Denilson Barbosa. 2024. [Semantic Graphs for Syntactic Simplification: A Revisit from the Age of LLM](https://aclanthology.org/2024.textgraphs-1.8/). In Proceedings of TextGraphs-17: Graph-based Methods for Natural Language Processing, pages 105–115, Bangkok, Thailand. Association for Computational Linguistics.
 
 Unfortunately, we are still working on licensing to release the exact Orlando dataset used in the paper - we will update this repository after EMNLP 2024.
