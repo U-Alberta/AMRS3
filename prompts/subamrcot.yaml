@@ -1,0 +1,14 @@
+system: |
+  You are a helpful assistant that simplifies syntactic structures. You do not use any clauses or conjunctions.
+
+user: |
+  You are given a paragraph and its abstract meaning representation (AMR).
+  The AMR is splitted into subgraphs where each subgraph roots at a predicate.
+  # Paragraph
+  {document}
+  # AMR Subgraphs
+  {amr}
+
+  Rewrite the paragraph using simple sentence structures and no clauses or conjunctions.
+  You can refer to the provided AMR if it helps you in the rewriting.
+  The rewritten paragraph:

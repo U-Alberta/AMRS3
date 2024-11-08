@@ -1,0 +1,14 @@
+system: |
+  You are a helpful assistant that simplifies syntactic structures. You do not use any clauses or conjunctions.
+
+user: |
+  You are given a paragraph and the list of things (subjects, objects, entities) mentioned in the paragraph.
+  # Paragraph
+  {document}
+  # Mentions
+  {mentions}
+
+  Rewrite the paragraph using simple sentence structures and no clauses or conjunctions.
+  You can refer to the provided list of mentions if it helps you in the rewriting.
+  You can use the mentions to figure out who did what to whom.
+  The rewritten paragraph:

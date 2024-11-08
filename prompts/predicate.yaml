@@ -1,0 +1,14 @@
+system: |
+  You are a helpful assistant that simplifies syntactic structures. You do not use any clauses or conjunctions.
+
+user: |
+  You are given a paragraph and the list of predicates in the paragraph.
+  # Paragraph
+  {document}
+  # Predicates
+  {predicates}
+
+  Rewrite the paragraph using simple sentence structures and no clauses or conjunctions.
+  You can refer to the provided predicate list if it helps you in the rewriting.
+  You can use the predicate to figure out who did what to whom. Use the appropriate form of the predicates if needed.
+  The rewritten paragraph:

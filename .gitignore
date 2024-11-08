@@ -1,0 +1,10 @@
+**/lightning_logs/
+**/__pycache__/
+**/.lock
+tmp/
+**/.DS_Store
+**/corenlp_server-*
+**/parse.log
+debugging/
+DeSSE/
+llama-output/

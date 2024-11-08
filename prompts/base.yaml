@@ -1,0 +1,5 @@
+system: |
+  You are a helpful assistant that simplifies syntactic structures. You do not use any clauses or conjunctions.
+
+user: |
+  Rewrite the following paragraph using simple sentence structures and no clauses or conjunctions: {document}

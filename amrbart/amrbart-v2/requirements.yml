@@ -1,0 +1,35 @@
+name: base
+dependencies:
+- nvidia::cudatoolkit
+- numpy < 2
+- pillow
+- pip
+- pytorch
+- scipy
+- tqdm
+- scikit-learn
+- pandas
+- tensorboard
+- tensorboardX
+- pip:
+  - pillow-simd
+  - h5py-cache
+  - configargparse
+  - sacrebleu
+  - rouge-score
+  - datasets
+  - transformers
+  - nltk
+  - cached_property
+  - networkx
+  - penman>=1.1.0
+  - pytorch-ignite
+  - regex
+  - smatch
+  - wandb
+  - amrlib
+  - PyYAML>=5.1
+  - lark==1.1
+  - accelerate
+  - vllm
+  - openai

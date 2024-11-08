@@ -1,0 +1,77 @@
+system: |
+  You are a helpful assistant that simplifies syntactic structures. You do not use any clauses or conjunctions.
+
+user: |
+  You are given a paragraph and its abstract meaning representation (AMR).
+  AMR captures “who is doing what to whom” in a sentence.
+  Each sentence is represented as a rooted, directed, acyclic graph with labels on edges (relations) and leaves (concepts).
+  Predicate nodes are marked with suffixes like -01 and -02, while ARG0, ARG1, etc., denote core, predicate-specific roles.
+
+  # Functions to operate on AMR
+  EXTRACT_SUBGRAPH(root: Node) -> AMRGraph # extracts the subgraph rooted at `root`.
+  AMR_TO_TEXT(graph: AMRGraph) -> str # converts an AMR graph back to text.
+
+  # Example program for rewritting
+  ```python
+  for predicate in amr:
+    subgraph = EXTRACT_SUBGRAPH(predicate)
+    print(AMR_TO_TEXT(subgraph))
+  ```
+
+  # Your task
+  Rewrite the paragraph using simple sentence structures and no clauses or conjunctions.
+  You can use the functions to operate on the AMR.
+  Begin your steps with `# Steps` and being your rewritten paragraph with `# Output`.
+
+  Now, it's your turn.
+
+  # Paragraph
+  It flows through the town of Yeovil and joins the River Parrett.
+
+  # AMR
+  (z0 / and
+    :op1 (z1 / flow-01
+             :ARG1 (z2 / it)
+             :path (z3 / town
+                       :name (z4 / name
+                                 :op1 "Yeovil")))
+    :op2 (z5 / join-01
+             :ARG1 z2
+             :ARG2 (z6 / river
+                       :name (z7 / name
+                                 :op1 "River"
+                                 :op2 "Parrett"))))
+
+assistant: |
+  # Steps
+  g = EXTRACT_SUBGRAPH(flow-01)
+  => 
+  (z1 / flow-01
+             :ARG1 (z2 / it)
+             :path (z3 / town
+                       :name (z4 / name
+                                 :op1 "Yeovil")))
+  print(AMR_TO_TEXT(g))
+  => It flows through the town of Yeovil.
+  g = EXTRACT_SUBGRAPH(join-01)
+  => 
+  (z5 / join-01
+              :ARG1 (z2 / it)
+              :ARG2 (z6 / river
+                        :name (z7 / name
+                                  :op1 "River"
+                                  :op2 "Parrett")))
+  print(AMR_TO_TEXT(g))
+  => It joins River Parrett.
+
+  # Output
+  It flows through the town of Yeovil. It joins River Parrett.
+
+user_next: |
+  Now, try another.
+
+  # Paragraph
+  {document}
+
+  # AMR
+  {amr}
